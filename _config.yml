@@ -30,7 +30,7 @@ disqus:
   shortname: painterlin
 
 # 主题设置，自动激活某个标签
-active: 关于
+active: PHP
 
 # 首页除了最新文章外显示分类
 cates:
