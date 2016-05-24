@@ -54,3 +54,12 @@ light7就不会为所取页面生成随机ID,当light7判断当前DOM中已存�
 
 ###picker的onchang
 在我们要实现级联效果时,picker的onchange是非常重要的,但官方文档中并未提供该事件.但代码中onchange是存在的,使用方法也可参考light7中的cityPicker.
+
+##一些不仅是light7,移动开发中都常遇到的问题
+###h5页面滑动不顺畅
+解决方案:在要滑动的元素中加入以下样式
+
+```
+    overflow:scroll;
+    -webkit-overflow-scrolling: touch;
+```
