@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Light7爬坑记录!
-category: 技术
+category: 前端
 tags: light7
 keywords:
 description:
