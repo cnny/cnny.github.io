@@ -1,0 +1,500 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"clock",
+				"clockIn"
+			],
+			[
+				"target",
+				"targetInfo"
+			],
+			[
+				"change",
+				"changeDisplay"
+			],
+			[
+				"Core_",
+				"Core_ImTagInfo"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "_config.yml",
+			"settings":
+			{
+				"buffer_size": 792,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 195.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/cnny/cnny.github.io"
+	],
+	"file_history":
+	[
+		"/Users/cnny/blog/CNAME",
+		"/Users/cnny/blog/_posts/生活/2015-10-21-My-Job.md",
+		"/Users/cnny/blog/_config.yml",
+		"/Users/cnny/blog/_includes/footer.html",
+		"/Users/cnny/blog/_includes/header.html",
+		"/Users/cnny/blog/_includes/header_title.html",
+		"/Users/cnny/blog/_includes/navside.html",
+		"/Users/cnny/blog/_posts/技术/2014-07-31-LaTeX-beamer-slides.md",
+		"/Users/cnny/blog/_posts/技术/2014-08-10-Using-LaTeX-with-Sublime-and-Skim-for-Mac.md",
+		"/Users/cnny/blog/_posts/技术/2014-09-17-Linux2.md",
+		"/Users/cnny/blog/_posts/技术/2014-10-07-Mac-Rar-Unrar.md",
+		"/Users/cnny/blog/_posts/技术/2014-12-06-Make-resume-by-LaTeX.md",
+		"/Users/cnny/blog/pages/about.html",
+		"/Users/cnny/blog/public/css/base.css",
+		"/Users/cnny/work/project/bighook_server/app/views/ot/header.phtml",
+		"/Users/cnny/work/project/bighook_server/app/views/ot/settings/edittodaytime.phtml",
+		"/Users/cnny/work/project/bighook_server/app/views/ot/settings/setindustry.phtml",
+		"/Users/cnny/work/project/bighook_server/app/views/ot/overtime/ranklist.phtml",
+		"/Users/cnny/work/project/bighook_server/app/views/ot/settings/locatecompany.phtml",
+		"/Users/cnny/work/project/bighook_server/app/views/ot/settings/setinfo.phtml",
+		"/Users/cnny/work/project/bighook_server/app/views/ot/settings/setworktime.phtml",
+		"/Users/cnny/work/project/bighook_server/app/views/ot/guest/otshare.phtml",
+		"/Users/cnny/work/project/bighook_server/app/views/ot/main/index.phtml",
+		"/Users/cnny/work/project/bighook_server/app/views/ot/main/otherindex.phtml",
+		"/Users/cnny/work/project/bighook_server/app/views/ot/overtime/promptendot.phtml",
+		"/Users/cnny/work/project/bighook_server/app/views/ot/overtime/promptstartot.phtml",
+		"/Users/cnny/work/project/bighook_server/app/views/user/report.phtml",
+		"/Users/cnny/work/project/bighook_server/app/views/ot/overtime/endot.phtml",
+		"/Users/cnny/work/project/bighook_server/admin/web/js/ueditor/dialogs/music/music.js",
+		"/Users/cnny/work/project/bighook_server/app/views/ot/main/index-endot.phtml",
+		"/Users/cnny/work/project/bighook_server/app/views/ot/main/index-oting.phtml",
+		"/Users/cnny/work/project/bighook_server/app/web/js/vendor/light7/light7.js",
+		"/Users/cnny/work/project/bighook_server/app/controllers/Ot/Guest.php",
+		"/Users/cnny/work/project/bighook_server/app/conf/develop/constant.php",
+		"/Users/cnny/work/project/bighook_server/app/views/ot/toolbar.phtml",
+		"/Users/cnny/work/project/bighook_server/app/controllers/Ot/Main.php",
+		"/Users/cnny/work/project/bighook_server/app/models/Ot/Overtime.php",
+		"/Users/cnny/work/project/bighook_server/system/Helper/Time.php",
+		"/Users/cnny/work/project/bighook_server/system/Com/BaiduLBS/GeoSearch.php",
+		"/Users/cnny/work/project/bighook_server/system/Com/BaiduLBS/GeoStorage.php",
+		"/Users/cnny/work/project/bighook_server/app/library/Dao/Core/OtOvertime.php",
+		"/Users/cnny/work/project/bighook_server/app/models/Crew/Tag.php",
+		"/Users/cnny/work/project/bighook_server/system/Helper/String.php",
+		"/Users/cnny/work/project/bighook_server/app/models/Ot/Settings.php",
+		"/Users/cnny/work/project/bighook_server/app/web/js/common.js",
+		"/Users/cnny/work/project/bighook_server/admin/web/js/common.js",
+		"/Users/cnny/work/project/bighook_server/admin/controllers/Crew/Sysnotice.php",
+		"/Users/cnny/work/project/bighook_server/admin/views/crew/sysnotice/update.phtml",
+		"/Users/cnny/work/project/bighook_server/admin/data/resource/global-vars.php",
+		"/Users/cnny/work/project/bighook_server/app/library/Function/Core.php",
+		"/Users/cnny/work/project/bighook_server/admin/library/Function/Core.php",
+		"/Users/cnny/work/project/bighook_server/app/modules/Api/controllers/Mgmts.php",
+		"/Users/cnny/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/cnny/work/project/bighook_server/app/models/Crew/Message.php",
+		"/Users/cnny/work/project/bighook_server/admin/controllers/Crew/Report.php",
+		"/Users/cnny/work/project/bighook_server/admin/controllers/Crew/Tags.php",
+		"/Users/cnny/work/project/bighook_server/admin/views/crew/tags/list.phtml",
+		"/Users/cnny/work/project/bighook_server/admin/controllers/Abstract.php",
+		"/Users/cnny/work/project/bighook_server/admin/views/_layout/_inner_header.phtml",
+		"/Users/cnny/work/project/bighook_server/app/models/Crew/Util.php",
+		"/Users/cnny/work/project/bighook_server/admin/views/system/scaffold/_tpls/index.phtml",
+		"/Users/cnny/work/project/bighook_server/admin/conf/develop/constant.php",
+		"/Users/cnny/work/project/bighook_server/admin/views/_layout/footer.phtml",
+		"/Users/cnny/work/project/bighook_server/system/Helper/Api.php",
+		"/Users/cnny/work/project/bighook_server/system/Com/Http.php",
+		"/Users/cnny/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/etc/hosts",
+		"/etc/apache2/extra/httpd-vhosts.conf"
+	],
+	"find":
+	{
+		"height": 33.0
+	},
+	"find_in_files":
+	{
+		"height": 111.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"生活",
+			"/posts",
+			"/pos't",
+			"/pages",
+			"/public",
+			"<div class=\"page page_scroll\"",
+			"<div class=\"page\"",
+			"pageAnimationEnd",
+			"getPage",
+			"pageLoadComplete",
+			"title'",
+			"title",
+			".page'",
+			".page",
+			"otshare",
+			"workInfo",
+			"end",
+			"addMyTag",
+			"fetchTagId",
+			"Dao('Core_ImTagInfo",
+			"strlen",
+			"search",
+			"两个字呼唤",
+			"羽毛球",
+			"disabled",
+			"n enabled",
+			".disabled",
+			"disable",
+			"disable (",
+			"n disable",
+			"getTargetTip",
+			"$GLOBALS['_T_TARGET_TYPES']",
+			"deepLinks",
+			"ajaxUpdateDisplayOrder",
+			"n __updateDisplayOrder",
+			"__updateDisplayOrder",
+			"ajaxUpdateDisplayOrder",
+			"display_orders",
+			"n __frontApi",
+			"deleteByPk",
+			"deleteMyTag",
+			"n __frontApi",
+			"deleteMyTag"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"/blog/pages",
+			"/blog/public",
+			"<div class=\"page page_scroll\" title=\"<?=$title?>\"",
+			"<div class=\"page\" title=\"<?=$title?>\""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "_config.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 792,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								443,
+								443
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 277.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 33.0
+	},
+	"input":
+	{
+		"height": 41.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "blog.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"edit",
+				"app/views/ot/settings/edittodaytime.phtml"
+			],
+			[
+				"light7.js",
+				"app/web/js/vendor/light7/light7.js"
+			],
+			[
+				"otshare",
+				"app/views/ot/guest/otshare.phtml"
+			],
+			[
+				"ot/guest.php",
+				"app/controllers/Ot/Guest.php"
+			],
+			[
+				"helpertime",
+				"system/Helper/Time.php"
+			],
+			[
+				"modelotovertime",
+				"app/models/Ot/Overtime.php"
+			],
+			[
+				"combaidulbs",
+				"system/Com/BaiduLBS/GeoStorage.php"
+			],
+			[
+				"combaidulbsgeosearch",
+				"system/Com/BaiduLBS/GeoSearch.php"
+			],
+			[
+				"tool",
+				"app/views/ot/toolbar.phtml"
+			],
+			[
+				"ot/overtime",
+				"app/models/Ot/Overtime.php"
+			],
+			[
+				"otovertime",
+				"app/library/Dao/Core/OtOvertime.php"
+			],
+			[
+				"otmain",
+				"app/controllers/Ot/Main.php"
+			],
+			[
+				"modelcrewtag",
+				"app/models/Crew/Tag.php"
+			],
+			[
+				"mainindex",
+				"app/views/ot/main/index.phtml"
+			],
+			[
+				"helperstring",
+				"system/Helper/String.php"
+			],
+			[
+				"tag",
+				"app/models/Crew/Tag.php"
+			],
+			[
+				"ranklist",
+				"app/views/ot/overtime/ranklist.phtml"
+			],
+			[
+				"otindex",
+				"app/views/ot/main/index.phtml"
+			],
+			[
+				"modelotsettings",
+				"app/models/Ot/Settings.php"
+			],
+			[
+				"common.js",
+				"app/web/js/common.js"
+			],
+			[
+				"common",
+				"admin/web/js/common.js"
+			],
+			[
+				"otindex.phtml",
+				"app/views/ot/main/index.phtml"
+			],
+			[
+				"tag.php",
+				"app/models/Crew/Tag.php"
+			],
+			[
+				"sysnotice/up",
+				"admin/views/crew/sysnotice/update.phtml"
+			],
+			[
+				"admincore",
+				"admin/library/Function/Core.php"
+			],
+			[
+				"modelcrewmessage",
+				"app/models/Crew/Message.php"
+			],
+			[
+				"mg",
+				"app/modules/Api/controllers/Mgmts.php"
+			],
+			[
+				"tag/list",
+				"admin/views/crew/tags/list.phtml"
+			],
+			[
+				"_innerheader",
+				"admin/views/_layout/_inner_header.phtml"
+			],
+			[
+				"foo",
+				"admin/views/_layout/footer.phtml"
+			],
+			[
+				"tags",
+				"admin/controllers/Crew/Tags.php"
+			],
+			[
+				"list",
+				"admin/views/crew/tags/list.phtml"
+			],
+			[
+				"comhttp",
+				"system/Com/Http.php"
+			],
+			[
+				"helperapi",
+				"system/Helper/Api.php"
+			],
+			[
+				"tag.",
+				"app/models/Crew/Tag.php"
+			],
+			[
+				"util",
+				"app/models/Crew/Util.php"
+			],
+			[
+				"repo",
+				"admin/controllers/Crew/Report.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/work/project/sublime-project/untitled.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 445.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
