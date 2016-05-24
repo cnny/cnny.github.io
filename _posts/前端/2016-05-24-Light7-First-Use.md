@@ -7,49 +7,44 @@ keywords:
 description:
 ---
 
-实验室里我申请的垃圾老爷机被师弟玩坏了，弄了一天，最后发现根本就是硬件损伤，想把它砸掉！太坑了。
+为缩短工期,节约设计及前端的时间,打算在项目中使用light7,可因为对light7的不熟悉,踩了无数坑,反而延误了工期.特此栽树,以供后人(以后的我)乘凉!
 
-clang是osx自带的c,c++,objective-c编译器；gnu是常用的c++的轻量级编译器，在windows上通常是下载MinGW；sublime就不多说了；本文的目的就是搭建一个轻量级的C++编辑-编译-调试-运行环境。
+###每个.page都要设置一个独立的ID!
+当去请求一个ajax页面时,light7会将目标页面的.page提取出来,并为其生成随机唯一ID,插入DOM.
+这样会导致每取一次页面,就会在DOM中插入一次页面,在DOM中产生大量冗余.
+解决办法是自己为每个.page赋予ID,
+light7就不会为所取页面生成随机ID,当light7判断当前DOM中已存在此ID时,便不会插入新的页面,而是将旧有页面替换
 
+###javascript要写在.page元素内!
+上面已经说了,light7只会抓取新页面.page内的内容.所以要把javascript写在.page中,当然,你也可以全部写在单独JS文件中,然后在入口文件引用.
 
-##MAC上
-###方法一：
-1. 打开sublime，`command`+`shift`+`P`
-2. 输入install，选择`install package`，回车
-3. 输入sublimeClang，回车下载
-4. 编写一个简单的c++程序，保存为name.cpp
-5. 在terminal中，`clang++ name.cpp -o name`或者`g++ name.cpp -o name`
-6. 双击name运行
-7. 如果运行过程不需要输入数据，可以直接在sublime中`command`+`shift`+`B`运行
+###事件不要绑定在document上!
+由于SPA DOM不刷新的特性,当一个页面被重复加载多次,该页面中的js会在DOM重复绑定多次.
 
-###方法二
-1. AppStore中下载Xcode
-2. 使用这个IDE
+###页面title需要通过特殊代码设置!
+还是老原因,由于SPA DOM不刷新, 所以通过router刷新页面时的title并不会变更.微信浏览器可以用以下方法解决:
 
+    // 修改页面标题
+    function setPageTitle(title) {
 
-##WINDOWS上
+      document.title = title;
 
-###方法一：
-1. 安装Installation Manager，运行，选择需要下载的组件，比如这里需要C++有关的组件
-2. 将MinGW的安装路径添加到环境变量中
-3. cmd中输入`g++ -v`来检测gnu是否安装成功
-4. 打开sublime text 3
-5. `preferences`->`browse packages`->`gcc`(好像是这样，反正自己摸索就好了)
-6. OK，完成
+      // 黑科技（iOS微信浏览器专用）
+      // 原因：微信浏览器的title在页面加载完成后就定了，不再监听 window.title 的 onchange 事件。
+      // 所以这里修改了title后，立即创建一个请求，加载一个空的iframe
+      if (isWeixin && isIOS) {
+        var iframe = document.createElement('iframe');
+        iframe.setAttribute('src', '/favicon.ico');
+        iframe.setAttribute('style', 'display: none; width:0; height:0;');
+        var handler = function () {
+          setTimeout(function () {
+            iframe.removeEventListener('load', handler);
+            document.body.removeChild(iframe);
+          }, 10);
+        }
+        iframe.addEventListener('load', handler);
+        document.body.appendChild(iframe);
+      }
+    }
 
-###方法二：
-1. Visual Studio
-2. 使用该IDE
-
-
-###有用的资料
-【1】[Writing and Running C++ Programs in the UNIX Environment using g++](https://www.cs.drexel.edu/~mcs171/Sp14/extras/g++/index.html)
-
-【2】[Writing and Running C++ Programs in the Mac OS X 10.4 Environment using xCode](https://www.cs.drexel.edu/~mcs171/Sp14/extras/xCode_Instructions/index.html)
-
-
-
-
-
-
-
+###
