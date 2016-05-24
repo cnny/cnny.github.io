@@ -1,14 +1,14 @@
-permalink: /:year/:month/:day/:title.html
+permalink: /:categories/:year/:month/:day/:title.html
 paginate: 10
 markdown: redcarpet
 
 # 作者信息
 author:
-  name: Anya Lin
-  email: lay.1010@hotmail.com
-  link: http://painterlin.com
+  name: Cnny
+  email: imcnny@gmail.com
+  link: http://imcnny.com
   weibo: http://weibo.com/orangeissweet
-  github: http://github.com/lay1010
+  github: http://github.com/cnny
   music: http://site.douban.com/linanya
   linkedin: https://www.linkedin.com/pub/anya-lin/81/91/232
 
