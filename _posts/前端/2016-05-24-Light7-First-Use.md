@@ -52,7 +52,7 @@ light7就不会为所取页面生成随机ID,当light7判断当前DOM中已存�
 ###按钮的disabled属性
 经过我的实践测试,light7中的按钮是有.disabled样式的,在官方文档中并未提及,使用时在按钮中加上class="disabled"即可.但要注意:该样式只会在默认主题中生效,原因还未研究.
 
-###picker的onchang
+###picker的onchange
 在我们要实现级联效果时,picker的onchange是非常重要的,但官方文档中并未提供该事件.但代码中onchange是存在的,使用方法也可参考light7中的cityPicker.
 
 ##一些不仅是light7,移动开发中都常遇到的问题
