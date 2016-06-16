@@ -37,7 +37,7 @@ layout: base
                         <td>
                           {% if book.status == '已读' %}
                             <span class="label label-success">{{ book.status }}</span>
-                          {% if book.status == '想读' %}
+                          {% elsif book.status == '想读' %}
                             <span class="label label-warning">{{ book.status }}</span>
                           {% elsif book.status == '在读' %}
                             <span class="label label-info">{{ book.status }}</span>
