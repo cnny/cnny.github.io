@@ -1,45 +1,96 @@
-permalink: /:categories/:year/:month/:day/:title.html
+# Site settings
+title: Yuu Blog
+SEOTitle: 陈问鱼的博客 | Hux Blog
+header-img: img/home-bg.jpg
+email: huxpro@gmail.com
+description: "永远不要失去好奇心，并对这个世界留有善意！"
+keyword: "陈问鱼,PHP,程序员,码农"
+url: "http://imcnny.com"              # your host, for absolute URL
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
+
+
+
+# SNS settings
+RSS: false
+weibo_username:     陈问鱼
+zhihu_username:     陈问鱼
+github_username:    陈问鱼
+#twitter_username:  陈问鱼
+facebook_username:  陈问鱼
+# linkedin_username:  firstname-lastname-idxxxx
+
+
+
+# Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
+highlighter: rouge
+permalink: pretty
 paginate: 10
-markdown: redcarpet
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
-# 作者信息
-author:
-  name: Cnny
-  email: imcnny@gmail.com
-  link: http://imcnny.com
-  weibo: http://weibo.com/u/2626472453
-  github: http://github.com/cnny
 
-# 站点信息
-title: 陈康文的博客
-description: My personal blog
-url: http://imcnny.com
-rss_url: /pages/atom.xml
 
-# gavatar头像及Favicon
-gavatar: /public/img/deer3.png
-favicon: /public/img/deer3.png
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+gems: [jekyll-paginate]
 
-# google analytics 设置
-ga:
-  id: UA-54262064-1
-  url: painterlin.com
 
-# disqus 设置
-disqus:
-  shortname: painterlin
 
-# 主题设置，自动激活某个标签
-active: 读书
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
 
-# 首页除了最新文章外显示分类
-cates:
-  - Optimization
-  - LaTeX
 
-# 中文本地化
-locals:
-  tags: 标签
-  about: 关于
-  newest: 最新文章
-  archive: 归档
+
+# Disqus settings
+#disqus_username: _your_disqus_short_name_
+
+# Duoshuo settings
+duoshuo_username: huxblog
+# Share component is depend on Comment so we can NOT use share only.
+duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+
+
+
+
+# Analytics settings
+# Baidu Analytics
+# ba_track_id: [your track id]
+
+# Google Analytics
+ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+ga_domain: huangxuan.me
+
+
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "写写代码，做做设计，<br>离开世界之前，一切都是过程"
+sidebar-avatar: /img/avatar-hux.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+
+
+# Progressive Web Apps
+chrome-tab-theme-color: "#000000"
+service-worker: true
+
+
+
+# Friends
+friends: [
+    {
+        title: "Silverd",
+        href: "http://silverd.cn/"
+    }
+]
