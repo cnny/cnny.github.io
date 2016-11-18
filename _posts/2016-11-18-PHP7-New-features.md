@@ -69,22 +69,26 @@ tags:
     }
 
 3.ArithmeticError:算术错误
-
+```PHP
     try {
         $value = 1 << -1;
     } catch (ArithmeticError $e) {
         echo $e->getMessage(), "\n";
     }
-
+```
 4.DivisionByZeroError:除数为0错误
-
+```php
     try {
         $value = 1 % 0;
     } catch (DivisionByZeroError $e) {
         echo $e->getMessage(), "\n";
     }
-
+```
 5:AssertionError:assert()方法错误
+
+### PHP7.0---性能优化
+#### Zval使用栈内存
+
 
 
 
