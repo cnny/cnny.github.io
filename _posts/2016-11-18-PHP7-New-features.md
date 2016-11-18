@@ -4,7 +4,7 @@ title:      "细说PHP7.0新特性"
 subtitle:   ""
 date:       2016-11-18 15:41:00
 author:     "Yuu"
-header-img: "/img/_post-php7.jpg"
+header-img: "img/_post-php7.jpg"
 tags:
     - PHP
 ---
