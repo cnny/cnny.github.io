@@ -69,13 +69,13 @@ tags:
     }
 
 3.ArithmeticError:算术错误
-```PHP
+
     try {
         $value = 1 << -1;
     } catch (ArithmeticError $e) {
         echo $e->getMessage(), "\n";
     }
-```
+
 4.DivisionByZeroError:除数为0错误
 ```php
     try {
