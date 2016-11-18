@@ -70,7 +70,7 @@ ga_domain: imcnny.com
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "写写代码，谈谈琴，<br>Life、Death or Love，What are you choose"
+sidebar-about-description: "写写代码，谈谈琴"
 sidebar-avatar: /img/avatar-yuu.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
