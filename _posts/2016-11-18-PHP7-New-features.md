@@ -1,4 +1,4 @@
---
+---
 layout:     post
 title:      "细说PHP7.0新特性"
 subtitle:   ""
@@ -7,7 +7,7 @@ author:     "Yuu"
 header-img: "/img/_post-php7.jpg"
 tags:
     - PHP
-----
+---
 
 ### PHP7.0---新特性
 
