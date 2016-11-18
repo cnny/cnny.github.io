@@ -12,6 +12,7 @@ tags:
 ### PHP7.0---新特性
 
 #### * 变量类型
+
 **PHP7版本函数的参数和返回值添加了类型限定，该项特性是为PHP7.1的JIT特性做准备。增加类型限定后，PHP JIT可以准确的判断变量类型。生成最佳的机器指令。**
 
     function test(int $a, string $b, array $c) : int {
@@ -22,6 +23,7 @@ tags:
 > 在PHP7.1中将会添加该性能。
 
 #### * 错误异常
+
 **PHP出现fatal and recoverable errors后，过去Zend引擎会终止PHP运行，PHP7.0后，可以通过try/catch捕获异常(注：曾今try/catch无法捕获该异常)**
 **Error一个新的，与之前的Exception分离的Class。**
 
@@ -87,7 +89,9 @@ tags:
 5:AssertionError:assert()方法错误
 
 ### PHP7.0---性能优化
+
 #### *Zval使用栈内存
+
 **在PHP Zend引擎和扩展中，经常要创建一个变量，底层就是一个Zval指针，之前的版本都是通过MAKE_STD_ZVAL动态的从堆上分配一个Zval内存。而PHP7可以直接使用栈内存。**
     
 **PHP5**
@@ -99,7 +103,8 @@ tags:
     zval val;
 
 
-#### * zend_string存储hash值，array查找不再需要重复计算hash值
+#### *zend_string存储hash值，array查找不再需要重复计算hash值
+
 **PHP7为字符串单独创建了新类型叫做zend_string，除了*char指针和长度外，增加了一个hash字段，用于保存字符串的hash值。数组键值查找不需要重复计算hash值。**
 
     struct _zend_string{
@@ -109,10 +114,11 @@ tags:
         char: val[1];
     }
 
-#### * hashtable桶内直接存储数据，减少了内存申请次数，增加了cache命中率和内存访问速度
-#### * zend_parse_paramenters改为宏实现，性能提升5%
-#### * 新增4中OpCode，call_user_function，is_int/sting/array，strlen，defined 4个行数变为PHP OpCode，指令，速度更快
-#### * 其他更多性能优化，例如基础类型int、float、bool等改为直接进行值拷贝，排序算法改进PCRE with JIT，execute_data和opline使用全局寄存器，使用gdb4.8的PGO功能。
+
+#### *hashtable桶内直接存储数据，减少了内存申请次数，增加了cache命中率和内存访问速度
+#### *zend_parse_paramenters改为宏实现，性能提升5%
+#### *新增4中OpCode，call_user_function，is_int/sting/array，strlen，defined 4个行数变为PHP OpCode，指令，速度更快
+#### *其他更多性能优化，例如基础类型int、float、bool等改为直接进行值拷贝，排序算法改进PCRE with JIT，execute_data和opline使用全局寄存器，使用gdb4.8的PGO功能。
 
 
 
