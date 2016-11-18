@@ -9,8 +9,8 @@ tags:
     - Mysql
 ---
 
-    // 尝试找到后缀名为”.err”的log文件，这里记录了更详细的信息。它可能位于：
-    /usr/local/var/mysql/your_computer_name.local.err
+尝试找到后缀名为”.err”的log文件，这里记录了更详细的信息。它可能位于：
+/usr/local/var/mysql/your_computer_name.local.err
 
 ### mysql未关闭
 
