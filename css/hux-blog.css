@@ -48,89 +48,8 @@
 .sidebar-container .short-about .list-inline > li {
   padding-left: 0px;
 }
-.catalog-container {
-  padding: 0px;
-}
-.side-catalog {
-  display: block;
-  overflow: auto;
-  height: 100%;
-  padding-bottom: 40px;
-  width: 195px;
-}
-.side-catalog.fixed {
-  position: fixed;
-  top: -21px;
-}
-.side-catalog.fold .catalog-toggle::before {
-  content: "+";
-}
-.side-catalog.fold .catalog-body {
-  display: none;
-}
-.side-catalog .catalog-toggle::before {
-  content: "−";
-  position: relative;
-  margin-right: 5px;
-  bottom: 1px;
-}
-.side-catalog .catalog-body {
-  position: relative;
-  list-style: none;
-  height: auto;
-  overflow: hidden;
-  padding-left: 0px;
-  padding-right: 5px;
-  text-indent: 0;
-}
-.side-catalog .catalog-body li {
-  position: relative;
-  list-style: none;
-}
-.side-catalog .catalog-body li a {
-  padding-left: 10px;
-  max-width: 180px;
-  display: inline-block;
-  vertical-align: middle;
-  height: 30px;
-  line-height: 30px;
-  overflow: hidden;
-  text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.side-catalog .catalog-body .h1_nav,
-.side-catalog .catalog-body .h2_nav,
-.side-catalog .catalog-body .h3_nav {
-  margin-left: 0;
-  font-size: 13px;
-  font-weight: bold;
-}
-.side-catalog .catalog-body .h4_nav,
-.side-catalog .catalog-body .h5_nav,
-.side-catalog .catalog-body .h6_nav {
-  margin-left: 10px;
-  font-size: 12px;
-}
-.side-catalog .catalog-body .h4_nav a,
-.side-catalog .catalog-body .h5_nav a,
-.side-catalog .catalog-body .h6_nav a {
-  max-width: 170px;
-}
-.side-catalog .catalog-body .active {
-  border-radius: 4px;
-  background-color: #F5F5F5;
-}
-.side-catalog .catalog-body .active a {
-  color: #0085a1!important;
-}
-@media (max-width: 1200px) {
-  .side-catalog {
-    display: none;
-  }
-}
 body {
-  /* Yuu learn from
+  /* Hux learn from
      *     TypeIsBeautiful,
      *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
      */
@@ -149,7 +68,7 @@ h3,
 h4,
 h5,
 h6 {
-  /* Yuu learn from
+  /* Hux learn from
      *     TypeIsBeautiful,
      *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
      */
@@ -195,17 +114,15 @@ br + small.img-hint {
 img.shadow {
   box-shadow: rgba(0, 0, 0, 0.258824) 0px 2px 5px 0px;
 }
-select {
-  -webkit-appearance: none;
-  margin-top: 15px;
-  color: #337ab7;
-  border-color: #337ab7;
-  padding: 0em 0.4em;
-  background: white;
-}
-select.sel-lang {
-  min-height: 28px;
-  font-size: 14px;
+@media screen and (max-width: 768px) {
+  select {
+    -webkit-appearance: none;
+    margin-top: 15px;
+    color: #337ab7;
+    border-color: #337ab7;
+    padding: 0em 0.4em;
+    background: white;
+  }
 }
 .table th,
 .table td {
@@ -226,9 +143,6 @@ pre code {
   width: auto;
   white-space: pre;
   word-wrap: normal;
-}
-.postlist-container {
-  margin-bottom: 15px;
 }
 .post-container a {
   color: #337ab7;
@@ -296,57 +210,25 @@ pre code {
   line-height: 2;
   margin-top: 20px;
 }
-.post-container .pager li {
-  width: 48%;
-}
-.post-container .pager li.next {
-  float: right;
-}
-.post-container .pager li.previous {
-  float: left;
-}
-.post-container .pager li > a {
-  width: 100%;
-}
-.post-container .pager li > a > span {
-  color: #808080;
-  font-weight: normal;
-  letter-spacing: 0.5px;
-}
 @media only screen and (max-width: 767px) {
-  /**
-	 * Layout
-	 * Since V1.6 we use absolute positioning to prevent to expand container-fluid
-	 * which would cover tags. A absolute positioning make a new layer.
-	 */
   .navbar-default .navbar-collapse {
-    position: absolute;
-    right: 0;
     border: none;
     background: white;
     box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
     box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.239216) 0px 1px 4px;
     border-radius: 2px;
     width: 170px;
+    float: right;
+    margin: 0px;
   }
-  /**
-	 * Animation
-	 * HuxBlog-Navbar using genuine Material Design Animation
-	 */
   #huxblog_navbar {
-    /**
-		 * Sharable code and 'out' function
-		 */
     opacity: 0;
     transform: scaleX(0);
     transform-origin: top right;
-    transition: all 200ms cubic-bezier(0.47, 0, 0.4, 0.99) 0ms;
+    transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
     -webkit-transform: scaleX(0);
     -webkit-transform-origin: top right;
-    -webkit-transition: all 200ms cubic-bezier(0.47, 0, 0.4, 0.99) 0ms;
-    /**
-		 *'In' Animation
-		 */
+    -webkit-transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
   }
   #huxblog_navbar a {
     font-size: 13px;
@@ -356,33 +238,27 @@ pre code {
     height: 0px;
     transform: scaleY(0);
     transform-origin: top right;
-    transition: transform 400ms cubic-bezier(0.32, 1, 0.23, 1) 0ms;
+    transition: transform 500ms cubic-bezier(0.23, 1, 0.32, 1);
     -webkit-transform: scaleY(0);
     -webkit-transform-origin: top right;
-    -webkit-transition: -webkit-transform 400ms cubic-bezier(0.32, 1, 0.23, 1) 0ms;
+    -webkit-transition: -webkit-transform 500ms cubic-bezier(0.23, 1, 0.32, 1);
   }
   #huxblog_navbar li {
     opacity: 0;
-    transition: opacity 100ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
-    -webkit-transition: opacity 100ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    transition: opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 205ms;
+    -webkit-transition: opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 205ms;
   }
   #huxblog_navbar.in {
     transform: scaleX(1);
     -webkit-transform: scaleX(1);
     opacity: 1;
-    transition: all 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
-    -webkit-transition: all 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
   }
   #huxblog_navbar.in .navbar-collapse {
     transform: scaleY(1);
     -webkit-transform: scaleY(1);
-    transition: transform 500ms cubic-bezier(0.23, 1, 0.32, 1);
-    -webkit-transition: -webkit-transform 500ms cubic-bezier(0.23, 1, 0.32, 1);
   }
   #huxblog_navbar.in li {
     opacity: 1;
-    transition: opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 205ms;
-    -webkit-transition: opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 205ms;
   }
 }
 .navbar-custom {
@@ -393,7 +269,7 @@ pre code {
   left: 0;
   width: 100%;
   z-index: 3;
-  /* Yuu learn from
+  /* Hux learn from
      *     TypeIsBeautiful,
      *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
      */
@@ -504,7 +380,7 @@ pre code {
   background-size: cover;
   -o-background-size: cover;
   margin-bottom: 0px;
-  /* 0 on mobile, modify by Yuu */
+  /* 0 on mobile, modify by Hux */
 }
 @media only screen and (min-width: 768px) {
   .intro-header {
@@ -544,7 +420,7 @@ pre code {
 }
 .intro-header .site-heading .subheading,
 .intro-header .page-heading .subheading {
-  /* Yuu learn from
+  /* Hux learn from
      *     TypeIsBeautiful,
      *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
      */
@@ -572,7 +448,7 @@ pre code {
   display: block;
 }
 .intro-header .post-heading .subheading {
-  /* Yuu learn from
+  /* Hux learn from
      *     TypeIsBeautiful,
      *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
      */
@@ -753,7 +629,7 @@ form .row:first-child .floating-label-form-group {
   border-top: 1px solid #eeeeee;
 }
 .btn {
-  /* Yuu learn from
+  /* Hux learn from
      *     TypeIsBeautiful,
      *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
      */
@@ -782,7 +658,7 @@ form .row:first-child .floating-label-form-group {
 }
 .pager li > a,
 .pager li > span {
-  /* Yuu learn from
+  /* Hux learn from
      *     TypeIsBeautiful,
      *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
      */
@@ -812,10 +688,6 @@ form .row:first-child .floating-label-form-group {
   background-color: #0085a1;
   border: 1px solid #0085a1;
 }
-.pager li > a:hover > span,
-.pager li > a:focus > span {
-  color: white;
-}
 .pager .disabled > a,
 .pager .disabled > a:hover,
 .pager .disabled > a:focus,
@@ -842,7 +714,10 @@ img::-moz-selection {
   color: white;
   background: transparent;
 }
-/* Yuu add tags support */
+body {
+  webkit-tap-highlight-color: #0085a1;
+}
+/* Hux add tags support */
 .tags {
   margin-bottom: -5px;
 }
@@ -931,7 +806,7 @@ img::-moz-selection {
 }
 .one-tag-list .tag-text {
   font-weight: 200;
-  /* Yuu learn from
+  /* Hux learn from
      *     TypeIsBeautiful,
      *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
      */
@@ -973,14 +848,14 @@ img::-moz-selection {
   }
 }
 /* Tags support End*/
-/* Yuu make all img responsible in post-container */
+/* Hux make all img responsible in post-container */
 .post-container img {
   display: block;
   max-width: 100%;
   height: auto;
   margin: 1.5em auto 1.6em auto;
 }
-/* Yuu Optimize UserExperience */
+/* Hux Optimize UserExperience */
 .navbar-default .navbar-toggle:focus,
 .navbar-default .navbar-toggle:hover {
   background-color: inherit;
@@ -988,7 +863,7 @@ img::-moz-selection {
 .navbar-default .navbar-toggle:active {
   background-color: rgba(255, 255, 255, 0.25);
 }
-/* Yuu customize Style for navBar button */
+/* Hux customize Style for navBar button */
 .navbar-default .navbar-toggle {
   border-color: transparent;
   padding: 19px 16px;
@@ -1005,7 +880,7 @@ img::-moz-selection {
 .navbar-default .navbar-toggle .icon-bar + .icon-bar {
   margin-top: 3px;
 }
-/* Yuu customize Style for Duoshuo */
+/* Hux customize Style for Duoshuo */
 .comment {
   margin-top: 20px;
 }
@@ -1028,19 +903,6 @@ img::-moz-selection {
 }
 .comment #ds-thread #ds-reset .ds-gradient-bg {
   background: none;
-}
-.comment #ds-thread #ds-reset .ds-post-options {
-  border-bottom: 1px solid #ccc;
-}
-.comment #ds-thread #ds-reset .ds-post-button {
-  border-bottom: 1px solid #ccc;
-}
-.comment #ds-thread #ds-reset .ds-post-button {
-  background: white;
-  box-shadow: none;
-}
-.comment #ds-thread #ds-reset .ds-post-button:hover {
-  background: #eeeeee;
 }
 #ds-smilies-tooltip ul.ds-smilies-tabs li a {
   background: white !important;

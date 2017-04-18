@@ -1,7 +1,159 @@
 ---
 layout: page
 title: "About"
-description: "Hey, this is Yuu."
+description: "Hey, this is Hux."
 header-img: "img/about-bg.jpg"
 ---
 
+<!-- Language Selector -->
+<select onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
+  <option value="0" selected> 中文 Chinese </option>
+  <option value="1"> 英语 English </option>
+</select>
+
+<!-- Chinese Version -->
+<div class="zh post-container">
+  <blockquote>
+    当你老了
+  </blockquote>
+  <p>
+    当你老了，白发苍苍，睡意朦胧，
+    <br>
+    在炉前打盹，请取下这本诗篇，
+    <br>
+    慢慢吟诵，梦见你当年的双眼
+    <br>
+    那柔美的光芒与青幽的晕影；
+    <br>
+    多少人真情假意，爱过你的美丽，
+    <br>
+    爱过你欢乐而迷人的青春，
+    <br>
+    唯独一人爱你朝圣者的心，
+    <br>
+    爱你日益凋谢的脸上的衰戚；
+    <br>
+    当你佝偻着，在灼热的炉栅边，
+    <br>
+    你将轻轻诉说，带着一丝伤感：
+    <br>
+    逝去的爱，如今已步上高山，
+    <br>
+    在密密星群里埋藏它的赧颜。
+  </p>
+</div>
+
+<!-- English Version -->
+<div class="en post-container">
+  <blockquote>
+    When you are old
+  </blockquote>
+    When you are old and grey and full of sleep,
+    <br/>
+    And nodding by the fire, take down this book,
+    <br/>
+    And slowly read, and dream of the soft look
+    <br/>
+    Your eyes had once, and of their shadows deep;
+    <br/>
+    How many loved your moments of glad grace,
+    <br/>
+    And loved your beauty with love false or true,
+    <br/>
+    But one man loved the pilgrim Soul in you,
+    <br/>
+    And loved the sorrows of your changing face;
+    <br/>
+    And bending down beside the glowing bars,
+    <br/>
+    Murmur, a little sadly, how Love fled
+    <br/>
+    And paced upon the mountains overhead
+    <br/>
+    And hid his face amid a crowd of stars.
+
+  <p style="text-align:right;">
+    -- William Butler Yeats
+  </p>
+
+</div>
+
+<!-- Handle Language Change -->
+<script type="text/javascript">
+  var $zh = document.querySelector(".zh");
+  var $en = document.querySelector(".en");
+  function onLanChange(index){
+    if(index == 0){
+      $zh.style.display = "block";
+      $en.style.display = "none";
+    }else{
+      $en.style.display = "block";
+      $zh.style.display = "none";
+    }
+  }
+  onLanChange(0);
+</script>
+
+
+
+{% if site.duoshuo_username %}
+<!-- 多说评论框 start -->
+<div class="comment">
+  <div class="ds-thread"
+  {% if site.duoshuo_username == "huxblog" %}
+    data-thread-id="1187623191091085319"
+  {% else %}
+    data-thread-key="{{site.duoshuo_username}}/about"
+  {% endif %}
+
+  data-title="{{page.title}}"
+  data-url="{{site.url}}/about/"></div>
+</div>
+<!-- 多说评论框 end -->
+
+<!-- Duoshuo hacking -->
+<input id="dsUser" type="hidden" value="{{site.duoshuo_username}}"  />
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+  // dynamic User hacking by Hux
+  var _user = document.getElementById('dsUser').value;
+  // duoshuo comment query.
+  var duoshuoQuery = {short_name: _user };
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+<!-- 多说公共JS代码 end -->
+{% endif %}
+
+
+{% if site.disqus_username %}
+<!-- disqus 评论框 start -->
+<div class="comment">
+  <div id="disqus_thread" class="disqus-thread">
+
+  </div>
+</div>
+<!-- disqus 评论框 end -->
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES * * */
+  var disqus_shortname = "{{site.disqus_username}}";
+  var disqus_identifier = "{{site.disqus_username}}/{{page.url}}";
+  var disqus_url = "{{site.url}}{{page.url}}";
+
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<!-- disqus 公共JS代码 end -->
+{% endif %}
