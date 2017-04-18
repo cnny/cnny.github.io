@@ -63,7 +63,7 @@ disqus_username: yuu-chen
 # ba_track_id: [your track id]
 
 # Google Analytics
-ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+ga_track_id: ''            # Format: UA-xxxxxx-xx
 ga_domain: imcnny.com
 
 

@@ -9,30 +9,101 @@ tags:
     - PHP
 ---
 
-### PHP7.0---新特性
-
-#### * 变量类型
+#### 变量类型
 
 **PHP7版本函数的参数和返回值添加了类型限定，该项特性是为PHP7.1的JIT特性做准备。增加类型限定后，PHP JIT可以准确的判断变量类型。生成最佳的机器指令。**
 
+```php
     function test(int $a, string $b, array $c) : int {
         // code
     }
+```
 
 > JIT:  JIT是Just In Time 的缩写，表示运行时将指令转化为二进制机器码。对于大部分实际项目并没有性能提升，但是对于计算密集型程序，可以将PHP中的OpCode转化为机器码，大幅度提升性能。
-> 在PHP7.1中将会添加该性能。
 
-#### * 错误异常
+#### null合并运算符
+
+**由于日常使用中存在大量同时使用三元表达式和 isset()的情况， 于是PHP7添加了null合并运算符 (??) 这个语法糖。如果变量存在且值不为NULL， 它就会返回自身的值，否则返回它的第二个操作数。**
+
+```php
+    $a = $b ?? 0;
+```
+
+**等价于**
+
+```php
+    $a = isset($b) ? $b : 0;
+```
+
+**(??)还可以这么用**
+
+```php
+    $a = $b ?? $c ?? $d;
+```
+
+#### 太空船操作符
+
+**太空船操作符用于比较两个表达式。当$a小于、等于或大于$b时它分别返回-1、0或1。 比较的原则是沿用 PHP 的常规比较规则进行的。**
+
+```php
+    // 整数
+    echo 1 <=> 1; // 0
+    echo 1 <=> 2; // -1
+    echo 2 <=> 1; // 1
+
+    // 浮点数
+    echo 1.5 <=> 1.5; // 0
+    echo 1.5 <=> 2.5; // -1
+    echo 2.5 <=> 1.5; // 1
+
+    // 字符串
+    echo "a" <=> "a"; // 0
+    echo "a" <=> "b"; // -1
+    echo "b" <=> "a"; // 1
+```
+
+#### 通过 define() 定义常量数组
+
+**Array 类型的常量现在可以通过 define() 来定义。在 PHP5.6 中仅能通过 const 定义。**
+
+```php
+    define('ANIMALS', [
+        'dog',
+        'cat',
+        'bird'
+    ]);
+
+    echo ANIMALS[1]; // 输出 "cat"
+```
+
+#### 匿名类
+
+**现在支持通过new class 来实例化一个匿名类，这可以用来替代一些“用后即焚”的完整类定义。**
+
+```php
+    $app = new Application;
+    $app->setLogger(new class implements Logger {
+        public function log(string $msg) {
+            echo $msg;
+        }
+    });
+
+    var_dump($app->getLogger());
+```
+
+#### 错误异常
 
 **PHP出现fatal and recoverable errors后，过去Zend引擎会终止PHP运行，PHP7.0后，可以通过try/catch捕获异常(注：曾今try/catch无法捕获该异常)**
 **Error一个新的，与之前的Exception分离的Class。**
 
+```php
     $var = 1;
     try {
         $var->method(); // Throws an Error object in PHP 7.
     } catch (Error $e) {
         // Handle error
     }
+```
 
  **注：在PHP7 alpha-2中，新的Exception Class命名为EngineException，但担心命名会引起误会，在正式版中改名为Error**
 
@@ -40,88 +111,17 @@ tags:
 
 **同时，你可以使用Throws来达到捕获所有异常的目的.**
 
+```php
     try {
          // Code that may throw an Exception or Error.
     } catch (Throwable $t) {
          // Handle exception
     }
+```
 
 
-**另外，PHP7.0还提供了一些方法来捕获具体的Error**
-
-1.TypeError：参数类型不正确
-
-    function add(int $left, int $right)
-    {
-        return $left + $right;
-    }
-
-    try {
-        $value = add('left', 'right');
-    } catch (TypeError $e) {
-        echo $e->getMessage(), "\n";
-    }
-
-2.ParseError:语法错误（注：A ParseError is thrown when an included/required file or eval()'d code contains a syntax error）
-
-    try {
-        require 'file-with-parse-error.php';
-    } catch (ParseError $e) {
-        echo $e->getMessage(), "\n";
-    }
-
-3.ArithmeticError:算术错误
-
-    try {
-        $value = 1 << -1;
-    } catch (ArithmeticError $e) {
-        echo $e->getMessage(), "\n";
-    }
-
-4.DivisionByZeroError:除数为0错误
-
-    try {
-        $value = 1 % 0;
-    } catch (DivisionByZeroError $e) {
-        echo $e->getMessage(), "\n";
-    }
-
-5:AssertionError:assert()方法错误
-
-### PHP7.0---性能优化
-
-#### * Zval使用栈内存
-
-**在PHP Zend引擎和扩展中，经常要创建一个变量，底层就是一个Zval指针，之前的版本都是通过MAKE_STD_ZVAL动态的从堆上分配一个Zval内存。而PHP7可以直接使用栈内存。**
-
-**PHP5**
-
-    zval *val; MAKE_STD_ZVAL(val);
-
-**PHP7**
-
-    zval val;
 
 
-#### * zend_string存储hash值，array查找不再需要重复计算hash值
-
-**PHP7为字符串单独创建了新类型叫做zend_string，除了*char指针和长度外，增加了一个hash字段，用于保存字符串的hash值。数组键值查找不需要重复计算hash值。**
-
-    struct _zend_string{
-        zend_refcounted: gc;
-        zend_ulong: h;
-        size_t: len;
-        char: val[1];
-    }
-
-
-#### * hashtable桶内直接存储数据，减少了内存申请次数，增加了cache命中率和内存访问速度
-
-#### * zend_parse_paramenters改为宏实现，性能提升5%
-
-#### * 新增4中OpCode，call_user_function，is_int/sting/array，strlen，defined 4个行数变为PHP OpCode，指令，速度更快
-
-#### * 其他更多性能优化，例如基础类型int、float、bool等改为直接进行值拷贝，排序算法改进PCRE with JIT，execute_data和opline使用全局寄存器，使用gdb4.8的PGO功能。
 
 
 
