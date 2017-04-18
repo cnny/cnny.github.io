@@ -38,8 +38,8 @@
 .sidebar-container .short-about img {
   width: 80%;
   display: block;
-  border-radius: 5px;
   margin-bottom: 20px;
+  border-radius: 100px;
 }
 .sidebar-container .short-about p {
   margin-top: 0px;
