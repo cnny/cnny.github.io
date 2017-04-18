@@ -1,11 +1,11 @@
 # Site settings
-title: Yuu Blog
-SEOTitle: 陈问鱼的博客 | Yuu Blog
+title: Cann Blog
+SEOTitle: 陈问鱼的博客 | Cann Blog
 header-img: img/home-bg.jpg
 email: imcnny@gmail.com
-description: "永远不要失去好奇心，并对这个世界留有善意！"
-keyword: "陈问鱼,PHP,程序员,码农"
-url: "http://imcnny.com"              # your host, for absolute URL
+description: "Es konnte auch anders sein ? Es muss sein !"
+keyword: "陈问鱼,Cann,yocann,PHP,程序员,码农"
+url: "http://yocann.cn"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 
@@ -64,7 +64,7 @@ disqus_username: yuu-chen
 
 # Google Analytics
 ga_track_id: 'UA-97554584-1'            # Format: UA-xxxxxx-xx
-ga_domain: imcnny.com
+ga_domain: yocann.cn
 
 
 
