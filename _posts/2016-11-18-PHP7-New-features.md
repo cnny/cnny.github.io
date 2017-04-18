@@ -1,10 +1,10 @@
 ---
 layout:     post
-title:      "细说PHP7.0新特性"
+title:      "PHP7实用的新特性"
 subtitle:   ""
 date:       2016-11-18 15:41:00
 author:     "Yuu"
-header-img: "img/_post-php7.jpg"
+header-img: "img/post-php7-new-features.jpg"
 tags:
     - PHP
 ---
@@ -93,13 +93,13 @@ tags:
 #### * Zval使用栈内存
 
 **在PHP Zend引擎和扩展中，经常要创建一个变量，底层就是一个Zval指针，之前的版本都是通过MAKE_STD_ZVAL动态的从堆上分配一个Zval内存。而PHP7可以直接使用栈内存。**
-    
+
 **PHP5**
-    
+
     zval *val; MAKE_STD_ZVAL(val);
 
 **PHP7**
-    
+
     zval val;
 
 
