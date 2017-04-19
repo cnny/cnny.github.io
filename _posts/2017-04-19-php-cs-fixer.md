@@ -6,16 +6,16 @@ date:       2017-04-19 17:45:00
 author:     "Yuu"
 header-img: "img/post-php-cs-fixer.jpg"
 tags:
-    - PHP,code-style,php-css-fixer
+    - PHP code-style php-css-fixer
 ---
 
 **[官方文档](https://github.com/FriendsOfPHP/PHP-CS-Fixer)**
 
-### 安装
+#### 安装
 
 ---
 
-#### 方法1：composer全局安装
+##### 方法1：composer全局安装
 
     $ composer global require friendsofphp/php-cs-fixer
 
@@ -23,27 +23,27 @@ tags:
 
     export PATH="$PATH:$HOME/.composer/vendor/bin"
 
-#### 方法2：phar程序安装
+##### 方法2：phar程序安装
 
 >下载最新稳定版本
 
     $ wget http://cs.sensiolabs.org/download/php-cs-fixer-v2.phar -O php-cs-fixer
 
-### 使用
+#### 使用
 
 ---
 
-#### Composer安装
+##### Composer安装
 
     $ php-cs-fixer fix /path/to/dir
     $ php-cs-fixer fix /path/to/file
 
-#### Phar程序安装
+##### Phar程序安装
 
     $ php php-cs-fixer.phar fix /path/to/dir
     $ php php-cs-fixer.phar fix /path/to/file
 
-#### 参数
+##### 参数
 
 **`--rules`** :
 
