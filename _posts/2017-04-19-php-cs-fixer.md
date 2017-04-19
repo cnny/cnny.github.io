@@ -17,19 +17,13 @@ tags:
 
 ---
 
-##### 方法1：composer全局安装
+##### composer全局安装
 
     $ composer global require friendsofphp/php-cs-fixer
 
 同时，确保 `~/.composer/vendor/bin`目录在你的`PATH`中。
 
     export PATH="$PATH:$HOME/.composer/vendor/bin"
-
-##### 方法2：phar程序安装
-
->下载最新稳定版本
-
-    $ wget http://cs.sensiolabs.org/download/php-cs-fixer-v2.phar -O php-cs-fixer
 
 #### 使用
 
@@ -39,11 +33,6 @@ tags:
 
     $ php-cs-fixer fix /path/to/dir
     $ php-cs-fixer fix /path/to/file
-
-##### Phar程序安装
-
-    $ php php-cs-fixer.phar fix /path/to/dir
-    $ php php-cs-fixer.phar fix /path/to/file
 
 ##### 参数
 
