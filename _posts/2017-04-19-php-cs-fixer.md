@@ -6,7 +6,9 @@ date:       2017-04-19 17:45:00
 author:     "Yuu"
 header-img: "img/post-php-cs-fixer.jpg"
 tags:
-    - PHP code-style php-css-fixer
+    - PHP
+    - code-style
+    - php-css-fixer
 ---
 
 **[官方文档](https://github.com/FriendsOfPHP/PHP-CS-Fixer)**
