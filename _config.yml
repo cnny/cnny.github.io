@@ -92,5 +92,13 @@ friends: [
     {
         title: "Silverd",
         href: "http://silverd.cn/"
-    }
+    },
+    {
+        title: "Markzhai",
+        href: "http://blog.zhaiyifan.cn/"
+    },
+    {
+        title: "Neo",
+        href: "https://roxyhuang.github.io/"
+    },
 ]
