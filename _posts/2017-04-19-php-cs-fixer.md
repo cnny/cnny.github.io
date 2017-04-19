@@ -12,7 +12,9 @@ tags:
 **[官方文档](https://github.com/FriendsOfPHP/PHP-CS-Fixer)**
 
 ### 安装
---
+
+---
+
 #### 方法1：composer全局安装
 
     $ composer global require friendsofphp/php-cs-fixer
@@ -28,7 +30,8 @@ tags:
     $ wget http://cs.sensiolabs.org/download/php-cs-fixer-v2.phar -O php-cs-fixer
 
 ### 使用
---
+
+---
 
 #### Composer安装
 
@@ -41,7 +44,8 @@ tags:
     $ php php-cs-fixer.phar fix /path/to/file
 
 #### 参数
-**`--rules`**
+
+**`--rules`** :
 
 要应用的代码规范。php-cs-fixer提供了三种规范（每个规范都包含了许多具体规则): `PSR1` `PSR2` `Symfony `；默认为`PSR1` `PSR2`,建议将三者都用上
 
@@ -57,23 +61,14 @@ tags:
 
 具体规范请看[官方文档](https://github.com/FriendsOfPHP/PHP-CS-Fixer#usage)
 
-**`--diff`** and **`--dry-run`**
+**`--diff`** and **`--dry-run`** : 将预计要修复的代码块显示在终端，并且不会对原文件进行修改
 
-将预计要修复的代码块显示在终端，并且不会对原文件进行修改
+**`--stop-on-violation`** :在遇到第一个需要修复的文件时，停止执行命令
 
-**`--stop-on-violation`**
+**`--format`** : output格式，支持`json` `xml` `junit` `txt`暂时未发现大的用处
 
-在遇到第一个需要修复的文件时，停止执行命令
+**`--show-progress`** : 选择进度呈现方式，暂时未发现大的用处
 
-**`--format`**
+**`--verbose`** : output会输出当前应用的修复规则
 
-output格式，支持`json` `xml` `junit` `txt`暂时未发现大的用处
-
-**`--show-progress`**
-
-选择进度呈现方式，暂时未发现大的用处
-
-**`--verbose`**
-
-output会输出当前应用的修复规则
 
