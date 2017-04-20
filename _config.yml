@@ -1,5 +1,5 @@
 # Site settings
-title: Cann's Blog
+title: Cann Blog
 SEOTitle: 陈问鱼的博客 | Cann Blog
 header-img: img/home-bg.jpg
 email: imcnny@gmail.com
@@ -70,7 +70,7 @@ ga_domain: yocann.cn
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "尽情享受滚烫的知识射入体内的快感！"
+sidebar-about-description: "永远不要失去好奇心，并对这个世界留有善意！"
 sidebar-avatar: /img/avatar-cann.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
