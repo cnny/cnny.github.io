@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "PHP代码规范自动修复工具《php-cs-fixer》中文文档"
+title:      "如何设置一个严格30分钟过期的Session"
 subtitle:   ""
 date:       2017-04-19 17:45:00
 author:     "Yuu"
