@@ -6,8 +6,8 @@ date:       2017-07-10 02:34
 author:     "Yuu"
 header-img: "img/post-lamp-project-publish.jpg"
 tags:
-    - PHP
-    - Session
+    - LAPM
+    - apache
 ---
 
 [所使用的镜像源](https://market.aliyun.com/products/53398003/cmjj017167.html?spm=5176.2020520101.image.selectFromMarketplace.211d5c9ajh3Mad)
@@ -19,6 +19,7 @@ tags:
 解决方案：
 
 01: 将 DocumentRoot 目录所有者设为 'apache'
+
 02:
 
     <Directory "/xxx">
