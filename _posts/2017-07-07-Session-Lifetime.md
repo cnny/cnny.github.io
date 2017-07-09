@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "如何设置一个严格30分钟过期的Session"
+title:      "Session的垃圾回收机制"
 subtitle:   ""
 date:       2017-04-19 17:45:00
 author:     "Yuu"
