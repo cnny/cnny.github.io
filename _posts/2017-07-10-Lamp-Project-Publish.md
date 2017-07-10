@@ -72,13 +72,13 @@ tags:
 
 注解：
 
-IfModule deflate_module 是判断如果 deflate_module 模块加载的话，执行里面的配置。
+**IfModule deflate_module** 是判断如果 deflate_module 模块加载的话，执行里面的配置。
 
-SetOutputFilter DEFLATE 是设置输出为 deflate 压缩算法。
+**SetOutputFilter DEFLATE** 是设置输出为 deflate 压缩算法。
 
-SetEnvIfNoCase Request_URI 是排除一些常见的图片，影音，文档等类型的后缀，不压缩。
+**SetEnvIfNoCase Request_URI** 是排除一些常见的图片，影音，文档等类型的后缀，不压缩。
 
-AddOutputFilterByType DEFLATE 是对常见的文本类型,如html,txt,xml,css,js做压缩处理。
+**AddOutputFilterByType DEFLATE** 是对常见的文本类型,如html,txt,xml,css,js做压缩处理。
 
 
 
