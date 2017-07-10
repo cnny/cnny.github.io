@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "LAMP服务器配置中遇到的的一些坑"
+title:      "LAMP服务器配置中遇到的一些杂项"
 subtitle:   ""
 date:       2017-07-10 02:34
 author:     "Yuu"
@@ -49,6 +49,33 @@ tags:
 
     mysql>GRANT ALL PRIVILEGES ON *.* TO 'jack'@’10.10.50.127’ IDENTIFIED BY '654321' WITH GRANT OPTION;
     mysql>FLUSH RIVILEGES
+
+#### 开启gzip
+
+修改httpd.conf
+
+开启以下两行
+
+    LoadModule deflate_module modules/mod_deflate.so
+    LoadModule headers_module modules/mod_headers.so
+
+在httpd.conf 中加入以下段落
+
+    <IfModule deflate_module>
+    SetOutputFilter DEFLATE
+    SetEnvIfNoCase Request_URI .(?:gif|jpe?g|png)$ no-gzip dont-vary
+    SetEnvIfNoCase Request_URI .(?:exe|t?gz|zip|bz2|sit|rar)$ no-gzip dont-vary
+    SetEnvIfNoCase Request_URI .(?:pdf|doc|avi|mov|mp3|rm)$ no-gzip dont-vary
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
+    AddOutputFilterByType DEFLATE application/x-javascript
+    </IfModule>
+
+注解：
+
+**IfModule deflate_module 是判断如果 deflate_module 模块加载的话，执行里面的配置。
+**SetOutputFilter DEFLATE 是设置输出为 deflate 压缩算法。
+**SetEnvIfNoCase Request_URI 是排除一些常见的图片，影音，文档等类型的后缀，不压缩。
+**AddOutputFilterByType DEFLATE 是对常见的文本类型,如html,txt,xml,css,js做压缩处理。
 
 
 
