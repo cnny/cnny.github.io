@@ -11,12 +11,12 @@ tags:
     - Shell
 ---
 
- 1: [代码检测工具：PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)
- 2: [代码检测工具：PHP_Cs_Fixer(备选)](https://github.com/FriendsOfPHP/PHP-CS-Fixer)
- 3: [参考文章--Git-Hook文档](https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90)
- 4: [参考文章--Shell 切割字符串方法--IFS的使用](http://smilejay.com/2011/12/bash_ifs/)
- 5: [参考文章--销毁IFS效果](http://blog.csdn.net/csfreebird/article/details/7974298)
- 6: [参考文章--Shell中正则的使用](http://www.111cn.net/phper/210/88457.htm)
+ 1. [代码检测工具：PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)
+ 2. [代码检测工具：PHP_Cs_Fixer(备选)](https://github.com/FriendsOfPHP/PHP-CS-Fixer)
+ 3. [参考文章--Git-Hook文档](https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90)
+ 4. [参考文章--Shell 切割字符串方法--IFS的使用](http://smilejay.com/2011/12/bash_ifs/)
+ 5. [参考文章--销毁IFS效果](http://blog.csdn.net/csfreebird/article/details/7974298)
+ 6. [参考文章--Shell中正则的使用](http://www.111cn.net/phper/210/88457.htm)
 
 #### 需求
 利用Git的hook功能，实现在`git commit`代码时，对本次提交的PHP文件自动进行代码规范校验，若代码符合规范，正常COMMIT，不符合规范，中断提交，并显示不合规范的内容。
