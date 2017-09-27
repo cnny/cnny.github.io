@@ -2,7 +2,7 @@
 layout:     post
 title:      "Nginx Location"
 subtitle:   ""
-date:       2018-08-25 19:41:00
+date:       2017-08-25 19:41:00
 author:     "Yuu"
 header-img: "img/post-php-cs-fixer.jpg"
 tags:
