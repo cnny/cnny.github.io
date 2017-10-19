@@ -3,7 +3,7 @@ layout:     post
 title:      "Yii2从入门到幼儿园01"
 subtitle:   "Dependence Injection Container"
 date:       2017-10-19 20:41:00
-author:     "Yuu"
+author:     "Cann"
 header-img: "img/20171019.jpg"
 tags:
     - Yii

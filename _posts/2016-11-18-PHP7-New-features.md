@@ -3,7 +3,7 @@ layout:     post
 title:      "PHP7实用的新特性"
 subtitle:   ""
 date:       2016-11-18 15:41:00
-author:     "Yuu"
+author:     "Cann"
 header-img: "img/post-php7-new-features.jpg"
 tags:
     - PHP

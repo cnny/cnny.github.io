@@ -3,7 +3,7 @@ layout:     post
 title:      "LAMP服务器配置中遇到的一些杂项"
 subtitle:   ""
 date:       2017-07-10 02:34
-author:     "Yuu"
+author:     "Cann"
 header-img: "img/post-lamp-project-publish.jpg"
 tags:
     - LAPM

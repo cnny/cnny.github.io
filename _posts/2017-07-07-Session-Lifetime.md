@@ -3,7 +3,7 @@ layout:     post
 title:      "Session的垃圾回收机制"
 subtitle:   ""
 date:       2017-04-19 17:45:00
-author:     "Yuu"
+author:     "Cann"
 header-img: "img/post-php-cs-fixer.jpg"
 tags:
     - PHP

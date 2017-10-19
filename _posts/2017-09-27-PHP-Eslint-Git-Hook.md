@@ -3,7 +3,7 @@ layout:     post
 title:      "利用Git-Hook实现的PHP代码自动检测"
 subtitle:   ""
 date:       2017-08-25 20:41:00
-author:     "Yuu"
+author:     "Cann"
 header-img: "img/20170927.jpeg"
 tags:
     - Git
