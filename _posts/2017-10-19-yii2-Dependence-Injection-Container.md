@@ -6,9 +6,9 @@ date:       2017-10-19 20:41:00
 author:     "Yuu"
 header-img: "img/20171019.jpg"
 tags:
-    - Git
+    - Yii
     - PHP
-    - Shell
+    - 依赖注入
 ---
 
 ### Yii2从入门到幼儿园01——Dependence Injection Container
