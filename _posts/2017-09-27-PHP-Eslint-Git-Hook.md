@@ -122,7 +122,7 @@ Untracked files:
 
 ##### 脚本：
 
-```
+```sh
 #!/bin/sh
 diffPath=$(git status)
 statusCode=0
@@ -134,14 +134,16 @@ do
     if [[ $path =~ new\ file:\ \ \ (.*\.php) || $path =~ modified:\ \ \ (.*\.php) ]]
     then
         IFS=$*
-        error=$(./vendor/bin/phpcs --standard=custom_ruleset.xml ${BASH_REMATCH[1]})
-        if [[ ${error} ]]; then
+        error=$(./vendor/bin/phpcs --standard=ruleset.xml ${BASH_REMATCH[1]})
+        if [[ ${error} ]]
+        then
+            error=${error//$'\x0A'                    / }
+            error=${error//$'\x0A'                / }
             statusCode=1
             echo ${error}
         fi
-    fi
+   fi
 done
-
 exit ${statusCode}
 ```
 
