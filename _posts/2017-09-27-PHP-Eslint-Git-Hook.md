@@ -126,21 +126,29 @@ Untracked files:
 #!/bin/sh
 diffPath=$(git status)
 statusCode=0
+isStaged=1
+notStagedMsg="Changes not staged for commit"
 
 IFS=$'\x0A'
 
 for path in $diffPath
 do
-    if [[ $path =~ new\ file:\ \ \ (.*\.php) || $path =~ modified:\ \ \ (.*\.php) ]]
+    if [[ $path =~ $notStagedMsg ]]
+    then
+        isStaged=0
+    fi
+
+    if [[ isStaged -eq 1 && ($path =~ new\ file:\ \ \ (.*\.php) || $path =~ modified:\ \ \ (.*\.php)) ]]
     then
         IFS=$*
         error=$(./vendor/bin/phpcs --standard=ruleset.xml ${BASH_REMATCH[1]})
         if [[ ${error} ]]
         then
-            error=${error//$'\x0A'                    / }
+            error=${error//$'\x0A'                   / }
             error=${error//$'\x0A'                / }
             statusCode=1
             echo ${error}
+            echo $'\x0A'
         fi
    fi
 done
