@@ -4,7 +4,7 @@ title:      "Nginx、Swoole是如何面对海量并发的"
 subtitle:   ""
 date:       2019-03-01 04:11:00
 author:     "Cann"
-header-img: "img/bg-03.jpg"
+header-img: "img/music-03.jpg"
 tags:
     - 基础知识
     - Nginx

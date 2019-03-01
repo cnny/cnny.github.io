@@ -4,7 +4,7 @@ title:      "CGI、FAST-CGI和PHP-FPM"
 subtitle:   ""
 date:       2019-01-01 04:11:00
 author:     "Cann"
-header-img: "img/bg-01.jpg"
+header-img: "img/music-01.jpg"
 tags:
     - 基础知识
     - PHP
