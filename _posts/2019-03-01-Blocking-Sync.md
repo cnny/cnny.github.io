@@ -4,7 +4,7 @@ title:      "什么是同步、异步、阻塞、非阻塞"
 subtitle:   ""
 date:       2019-03-01 04:11:00
 author:     "Cann"
-header-img: "img/2018-06-21.jpg"
+header-img: "img/bg-02.jpg"
 tags:
     - 基础知识
 ---
