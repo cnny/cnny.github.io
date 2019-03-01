@@ -123,7 +123,7 @@ Untracked files:
 ##### 脚本：
 
 ```sh
-#!/bin/sh
+#!/bin/bash
 diffPath=$(git status)
 statusCode=0
 isStaged=1

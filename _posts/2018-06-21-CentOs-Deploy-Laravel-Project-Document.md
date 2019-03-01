@@ -73,13 +73,11 @@ cd nginx-1.14.0
 /opt/nginx/sbin/nginx: error while loading shared libraries: libluajit-5.1.so.2: cannot open shared object file: No such file or directory
 ```
 
-这个问题很多人发现后采用了将libluajit-5.1.so.2链接到系统库的做法:
+# 解决方案：使 ld.so.conf 立即生效
 
 ```
-ln -s /usr/local/lib/libluajit-5.1.so.2 /lib64/
+ldconfig --verbose
 ```
-
-这样可以解决问题，但是相当于一个补救方法。
 
 #### 配置php
 
