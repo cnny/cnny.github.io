@@ -16,7 +16,7 @@ tags:
 
 Apache处理一个请求是同步阻塞的模式
 
-![image](http://note.youdao.com/yws/res/3384/FFF4FBE5AAFF460BB75F3162E01ED7CB)
+![image](https://blog-1252314417.cos.ap-shanghai.myqcloud.com/image-1.png)
 
 每到达一个请求，Apache都会去fork一个子进程去处理这个请求，直到这个请求处理完毕。
 
@@ -86,25 +86,25 @@ IO复用异步非阻塞程序使用经典的Reactor模型，Reactor顾名思义�
 
 >注:什么是句柄？句柄英文为handler，可以形象的比喻为锅柄、勺柄。也就是资源的唯一标识符、资源的ID。通过这个ID可以操作资源。
 
-![image](http://note.youdao.com/yws/res/3408/08057E25EC974633AEB0444320DC626F)
+![image](https://blog-1252314417.cos.ap-shanghai.myqcloud.com/image-2.png)
 
 Reactor只是一个事件发生器，实际对socket句柄的操作，如connect/accept、send/recv、close是在callback中完成的。
 
 #### Swoole的架构
 
-![image](http://note.youdao.com/yws/res/3411/2281354E1993441E84163C788D6C8013)
+![image](https://blog-1252314417.cos.ap-shanghai.myqcloud.com/image-3.png)
 
 swoole的处理连接流程图如下：
 
-![image](http://note.youdao.com/yws/res/3413/BF0AB68DBC3A41D7999DDD53064F4C49)
+![image](https://blog-1252314417.cos.ap-shanghai.myqcloud.com/image-4.png)
 
 当请求到达时,swoole是这样处理的：
 
-![image](http://note.youdao.com/yws/res/3419/4818A0E88D4D4CBE9F983F345A02E32A)
+![image](https://blog-1252314417.cos.ap-shanghai.myqcloud.com/image-5.png)
 
 因为reactor基于epoll，所以每个reactor可以处理无数个连接请求。 如此，swoole就轻松的处理了高并发。
 
-#### swoole如何实现异步I/O的
+#### swoole如何实现异步I/O的（异步IO和协程不是一回事）
 
 基于上面的Swoole结构图，我们看到swoole的worker进程有2种类型：
 一种是 普通的worker进程，一种是 task worker进程。
@@ -113,6 +113,6 @@ worker进程是用来处理普通的耗时不是太长的请求；task worker进
 
 我们以异步Mysql举例：
 
-![image](http://note.youdao.com/yws/res/3422/02D631FB295D4406B367971F336C41D1)
+![image](https://blog-1252314417.cos.ap-shanghai.myqcloud.com/image-6.png)
 
 如此，通过worker、task worker结合的方式，我们就实现了异步I/O。
