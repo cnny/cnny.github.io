@@ -231,7 +231,7 @@ sudo security delete-certificate -c "gd" // 这里是填证书名称，而不是
 
 除了用命令行管理证书，还可以在 `钥匙串访问`中进行管理
 
-![image-20190514171111234](/Users/cann/home/wwwroot/blog/_posts/assets/image-20190514171111234.png)
+![image-20190514171111234](assets/image-20190514171111234.png)
 
 ### Windows
 
