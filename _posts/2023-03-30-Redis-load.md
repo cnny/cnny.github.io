@@ -4,7 +4,7 @@ title:      "Redis CPU 负载过高问题排查记录"
 subtitle:   ""
 date:       2023-03-30 14:11:00
 author:     "Cann"
-header-img: "img/music-03.jpg"
+header-img: "img/music-05.jpg"
 tags:
     - Redis
 ---
