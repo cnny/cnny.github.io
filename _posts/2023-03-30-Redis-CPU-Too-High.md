@@ -209,3 +209,5 @@ PS: 同上，maxmemory-policy = noeviction 时， --hotkeys 命令会执行报�
     save 300 10    // 表示每5分钟且至少有10个key改变，就触发一次持久化
     save 60 10000  // 表示每60秒至少有10000个key改变，就触发一次持久化
 ```
+
+>PS: 当然，最好是直接修改 Redis 配置文件
