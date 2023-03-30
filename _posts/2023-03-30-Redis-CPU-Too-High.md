@@ -4,14 +4,14 @@ title:      "Redis CPU 负载过高问题排查记录"
 subtitle:   ""
 date:       2023-03-30 14:11:00
 author:     "Cann"
-header-img: "img/music-37.jpg"
+header-img: "img/music-03.jpg"
 tags:
     - Redis
 ---
 
 #### 小记：单进程 Redis CPU 负载100%的排查过程
 
-##### 1: 怀疑是否接数过多
+##### 1: 怀疑是否连接数过多
 
 ```
     # 查看连接数
