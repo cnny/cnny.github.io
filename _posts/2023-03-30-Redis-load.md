@@ -1,10 +1,10 @@
 ---
 layout:     post
-title:      "Redis CPU 负载过高问题排查记录"
+title:      "单进程 Redis CPU 负载100%的排查过程"
 subtitle:   ""
-date:       2023-03-30 14:11:00
+date:       2023-03-29 17:09:00
 author:     "Cann"
-header-img: "img/music-05.jpg"
+header-img: "img/bg-38.jpg"
 tags:
     - Redis
     - Linux
